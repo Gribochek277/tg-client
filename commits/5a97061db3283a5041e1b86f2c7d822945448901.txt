@@ -1,0 +1,18 @@
+repository: serhii/tg-client
+commit: 5a97061db3283a5041e1b86f2c7d822945448901
+date: 2026-08-12T05:06:09+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Fix: resize handler infinite recursion; restore status after manual refresh
+onResize was registered into its own listener set, so the first resize event
+recursed until 'Maximum call stack size exceeded'. Found by running the app
+live in a Herdr pane right after login. Also reset the status line after
+Ctrl+R completes.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
