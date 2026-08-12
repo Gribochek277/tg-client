@@ -1,0 +1,28 @@
+repository: serhii/tg-client
+commit: 62942f7c3d05a203ca102bca98769dfbbedf4a65
+date: 2026-08-12T05:27:45+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Navigation: Ctrl+H/L pane focus, Ctrl+Up/Down view scroll, cursor-follow
+- Ctrl+L / Ctrl+H switch pane focus (spatial left/right with cycle
+  fallback); Ctrl+H arrives as Backspace on legacy terminals, so
+  Backspace routes to 'focus left' outside the composer
+- Ctrl+Up / Ctrl+Down scroll the message view without moving the
+  cursor (Ctrl+J is unusable — it is Enter/LF on real terminals);
+  scroll now works from any focus state, incl. the sidebar
+- j/k move the cursor and the view follows via edge-anchoring:
+  re-anchor only when the cursor leaves the visible window
+  (manual scroll is never undone while the cursor is in view)
+- Scroll offset is now relative to the bottom, so Ctrl+Up works
+  even with the cursor parked at the newest message
+- App never freezes on slow networks: event loop starts before
+  refreshDialogs(); startup status shows 'Loading dialogs…'
+- Focused pane border is drawn in the accent color
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
