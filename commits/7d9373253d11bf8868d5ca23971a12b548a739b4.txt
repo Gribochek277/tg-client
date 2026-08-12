@@ -1,0 +1,28 @@
+repository: serhii/tg-client
+commit: 7d9373253d11bf8868d5ca23971a12b548a739b4
+date: 2026-08-12T07:34:33+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Single pane, no compact mode, inline Kitty images by default
+- Remove split/multi-pane support: layout is normalized to a single leaf on
+  startup; Ctrl+V/B/K/W and Alt+arrow pane handlers removed.
+- Remove compact mode (Ctrl+D toggle) from settings and keys.
+- Inline media: photos/stickers/image docs download automatically and render
+  via the Kitty graphics protocol. FrameBuffer gained erase()/hole cells so
+  placed images survive redraws; incremental diff flush keeps the screen fast.
+- New header-only PNG/JPEG/WebP size parser (imgsize.ts); WebP stickers work.
+- Images re-transmit only when placement changes; stale placements are
+  deleted (no ghost images after scrolling).
+- Render connect in the background: the TUI appears instantly with a
+  'Connecting…' status instead of blocking on the network. Connect has a
+  30s timeout, a fresh-client retry (3 attempts) and error status instead of
+  a dead screen; teleproto's stdout logger is silenced (no screen corruption).
+- Compose hint row simplified; placeholder shown when empty and focused.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
