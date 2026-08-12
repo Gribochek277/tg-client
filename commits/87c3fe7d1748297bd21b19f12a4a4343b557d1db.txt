@@ -1,0 +1,22 @@
+repository: serhii/tg-client
+commit: 87c3fe7d1748297bd21b19f12a4a4343b557d1db
+date: 2026-08-12T15:05:08+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Fix background leak in diff flush; aspect-correct image sizing
+- The incremental flush emitted styles per run but never reset the terminal
+  style at the start of a changed run, so the selected row's activeBg leaked
+  into every following row (sidebar AND message view) — everything looked
+  highlighted, and moving the selection 'painted' rows below it. Every
+  changed run now starts with RESET.
+- Image boxes are sized with the terminal's real cell aspect ratio
+  (queried via CSI 14 t at startup) instead of assuming 2:1, so inline
+  photos line up exactly with the text grid while scrolling.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
