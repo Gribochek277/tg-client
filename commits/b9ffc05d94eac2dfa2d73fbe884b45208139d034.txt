@@ -1,0 +1,19 @@
+repository: serhii/tg-client
+commit: b9ffc05d94eac2dfa2d73fbe884b45208139d034
+date: 2026-08-13T01:13:36+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Add chat folder management (:folder add/remove)
+TgClient.createFolder()/deleteFolder() via messages.UpdateDialogFilter:
+new folders take the next free filter id and include the currently open
+chat as their first member (Telegram rejects empty filters). The sidebar
+tab strip now scrolls so the active folder is always fully visible, so
+newly created folders appear and are switchable. :folder lists folders.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
