@@ -1,0 +1,32 @@
+repository: serhii/tg-client
+commit: 24b81e2dd4803b845c3c0365f7dd93f0c158da52
+date: 2026-08-12T14:41:28+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Vim modes (hjkl/i), compact image sizing, chat folders, transparent bg
+Modes:
+- NORMAL (default): j/k move, h/l sidebar↔pane focus, i (or Enter in the
+  pane) enters INPUT, g/G jumps, f cycles folders. Status line shows a
+  NORMAL/INSERT chip on the right.
+
+Images:
+- Inline images are now fitted into a box (max 60 cols x 10 rows or half
+  the view height, whichever is smaller) preserving aspect ratio instead of
+  blowing up to the full body width — no more half-screen photos.
+
+Folders:
+- Sidebar reads messages.getDialogFilters: tab row on top
+  (All chats│Chats│Bots), f cycles, the dialog list filters by the active
+  folder's include_peers (falling back to flag rules for bots/groups/etc).
+- Verified live: tabs render, Chats folder filters to its 36 chats.
+
+UI: transparent background everywhere except the selected sidebar row and
+the message cursor row (terminal transparency shows through).
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
