@@ -1,0 +1,21 @@
+repository: serhii/tg-client
+commit: 7e5ca4b4a62c950bda13ac126ea9953531d3131d
+date: 2026-08-13T01:44:01+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Add desktop notifications for new messages (notify-send)
+Incoming 'new' updates notify via notify-send (mako/dunst daemon):
+- title = chat name, body = first 120 chars of the message text
+- skips the chat open in the focused pane and muted chats
+- 1.5s burst collapse per chat (albums)
+- async spawn, stdio ignored — the TUI never blocks and stdout stays clean
+- disabled via notifications:false in config.json (default on)
+- outgoing updates are filtered upstream (out flag)
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
