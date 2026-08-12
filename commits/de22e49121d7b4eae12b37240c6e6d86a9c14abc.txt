@@ -1,0 +1,22 @@
+repository: serhii/tg-client
+commit: de22e49121d7b4eae12b37240c6e6d86a9c14abc
+date: 2026-08-12T14:50:13+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Start at top of chat list, folder cursor jump, status-bar key hints
+- On first load the sidebar cursor starts at the first (top) dialog
+  instead of restoring the last position.
+- Switching folders (f) jumps the cursor to the top of that folder.
+- The status bar now shows live key hints for the active mode
+  (N: j/k nav · h/l focus · i type · f folder · o preview · q quit /
+  I: enter:send esc:exit) alongside the transient status message.
+- No other changes: backgrounds already only exist on the selected
+  sidebar row and the message cursor row.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
