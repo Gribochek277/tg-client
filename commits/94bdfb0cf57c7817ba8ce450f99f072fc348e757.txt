@@ -1,0 +1,17 @@
+repository: serhii/tg-client
+commit: 94bdfb0cf57c7817ba8ce450f99f072fc348e757
+date: 2026-08-12T05:07:19+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Fix: teleproto Message.date is unix seconds, not a Date
+Handing m.date?.getTime() crashed the message view right after login.
+Added epochMs()/epochMsOrNull() helpers that convert sec→ms (and detect
+already-ms values). Found live in the Herdr pane.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
