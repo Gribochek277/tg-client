@@ -1,0 +1,22 @@
+repository: serhii/tg-client
+commit: c908a4f795a61e98b592b1cedc19bb07acfdf521
+date: 2026-08-12T15:36:46+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Rewrite the frame flush to whole-row redraws — fixes scrambled render
+The incremental per-cell diff emitted partial runs, which left ghost text,
+missing characters and mixed rows once images loaded and the layout
+shifted (long multibyte lines + holes + scroll). The flush now re-emits a
+COMPLETE row whenever any cell in it changed (holes skipped so Kitty
+images stay), with terminal auto-wrap disabled while drawing. A row on
+screen is always whole — no ghosts, no dropped characters, stable scroll
+in photo-heavy chats. Verified live: scroll up/down through photo chats
+stays clean.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
