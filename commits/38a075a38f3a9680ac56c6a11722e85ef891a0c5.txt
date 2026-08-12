@@ -1,0 +1,16 @@
+repository: serhii/tg-client
+commit: 38a075a38f3a9680ac56c6a11722e85ef891a0c5
+date: 2026-08-12T05:00:39+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Fix: --login must bootstrap credentials before the API-key check
+main() previously exited on missing api_id/api_hash before the login flow
+could prompt for them. Found while running the app live in a pane.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
