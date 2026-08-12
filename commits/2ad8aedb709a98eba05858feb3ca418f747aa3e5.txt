@@ -1,0 +1,27 @@
+repository: serhii/tg-client
+commit: 2ad8aedb709a98eba05858feb3ca418f747aa3e5
+date: 2026-08-12T17:05:05+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Fix image rendering and crash-on-scroll in photo chats
+- Kitty graphics: a=T only uploads the image; an explicit a=p (place)
+  now displays it at the box position. Without it the images never
+  appeared and the reserved hole cells kept the old 'loading…' text
+  forever. Applied to both inline images and the 'o' preview.
+- FrameBuffer.erase() now blanks the prev buffer for the erased cells,
+  so when an image box moves over old text (scroll), the flush clears
+  the terminal's stale content instead of leaving ghost rows behind.
+- Handle unhandled promise rejections / exceptions in main.ts — with
+  Node >= 15 an unhandled rejection crashed the whole TUI mid-session
+  (e.g. while opening a chat with cached media).
+- Whole-row flush + cursor tracking: rows are always re-emitted whole
+  so multibyte text, image holes and scrolling never leave half-written
+  lines or mixed content on screen.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
