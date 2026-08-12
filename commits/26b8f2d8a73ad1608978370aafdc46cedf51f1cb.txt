@@ -1,0 +1,22 @@
+repository: serhii/tg-client
+commit: 26b8f2d8a73ad1608978370aafdc46cedf51f1cb
+date: 2026-08-12T04:54:52+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Initial scaffold: TypeScript Telegram TUI with Kitty graphics support
+- teleproto (MTProto) integration with interactive login flow
+- Custom ANSI renderer + styled FrameBuffer (no TUI lib dependency)
+- Kitty graphics protocol module (transmit/query/delete, chunked)
+- Raw-mode key parser (CSI/SS3 + modifiers), resize handling
+- Split-pane layout tree, sidebar/messages/composer renderers
+- Slash-command registry with CommandHost interface
+- Session/layout/aliases persistence (XDG paths)
+- PRD + README
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
