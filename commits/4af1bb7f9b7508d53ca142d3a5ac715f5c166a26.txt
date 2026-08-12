@@ -1,0 +1,19 @@
+repository: serhii/tg-client
+commit: 4af1bb7f9b7508d53ca142d3a5ac715f5c166a26
+date: 2026-08-12T14:01:21+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Use Telegram thumbnails for inline images instead of full resolution
+Inline photos now download the 'x' (≈800px) thumbnail first, falling back
+to 'm' (≈320px) and then the full image — much faster scrolling through
+photo-heavy chats. Files are cached as chatId_msgId_x.jpg (thumb) /
+chatId_msgId.jpg (full); the cache-hit scan knows both. The 'o' preview
+reuses a cached full-res copy if present and fetches it otherwise.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
