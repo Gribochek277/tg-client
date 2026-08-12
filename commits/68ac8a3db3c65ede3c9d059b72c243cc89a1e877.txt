@@ -1,0 +1,23 @@
+repository: serhii/tg-client
+commit: 68ac8a3db3c65ede3c9d059b72c243cc89a1e877
+date: 2026-08-13T00:11:00+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Add Neovim-style mode system: command-line (:), search (/ ?), :q exit
+Replaces /slash commands with a Neovim mode machine:
+- normal: navigation (j/k/h/l/f/o), mode entry via :, /, ?
+- insert: composer (i/Enter/Esc)
+- command: bottom : line with Tab-cycling completion, keep-on-error
+- search: / forward, ? backward, wrap-around, n/N repeat
+
+:q quits (Ctrl+Q kept as emergency alternative); last command line is
+recalled between invocations. Docs (README, PRD, main.ts --help)
+updated; AGENTS.md now limits screenshots to image features.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
