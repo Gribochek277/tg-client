@@ -1,0 +1,14 @@
+repository: serhii/tg-client
+commit: 328e4316adce696f9605cdc02cc6420e5c095035
+date: 2026-08-12T05:30:04+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Fix: preview status only promises implemented keys (esc to close)
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
