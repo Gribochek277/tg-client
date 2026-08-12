@@ -1,0 +1,14 @@
+repository: serhii/tg-client
+commit: 39580d514979264128c5b7728da3cb9d8f74f673
+date: 2026-08-13T02:19:38+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Add :theme light/dark switcher with settings.json persistence
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
