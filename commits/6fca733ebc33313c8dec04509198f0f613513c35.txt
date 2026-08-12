@@ -1,0 +1,14 @@
+repository: serhii/tg-client
+commit: 6fca733ebc33313c8dec04509198f0f613513c35
+date: 2026-08-12T17:30:39+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Add AGENTS.md: stack, run/debug conventions, screenshot-first workflow
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
