@@ -1,0 +1,21 @@
+repository: serhii/tg-client
+commit: a58374bfe88a602573c1e6745c86ef2f2587b1b9
+date: 2026-08-13T02:08:26+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Respect peer-type mute (mute-all channels/groups) in dialog mute state
+The official clients expose type-level notify settings
+(account.getNotifySettings with InputNotifyBroadcasts/Chats/Users): here
+all channels and groups are muted forever. A chat with an unset per-chat
+muteUntil inherits the type-level mute; muteUntil=0 is an explicit
+per-chat unmute override. Channels vs supergroups are told apart via the
+Channel.megagroup flag (supergroups use the chats setting). Result: 158
+of 306 chats muted — matches the official client.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
