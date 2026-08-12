@@ -1,0 +1,20 @@
+repository: serhii/tg-client
+commit: b40bb9bfe9a3e0e7a64fd061b9ae24d1a48f9982
+date: 2026-08-13T02:03:02+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Fix muted detection: read muteUntil from dialog notifySettings
+The teleproto Dialog wrapper has no 'muted' field, so muted chats were
+never recognized and notifications/sidebar styling treated them as
+unmuted. Read dialog.dialog.notifySettings.muteUntil (unix seconds; 0/
+absent = unmuted, 2147483647 = forever) and mark the dialog muted when
+it is in the future. Verified: 22 of 306 chats are muted and are now
+excluded from notifications.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
