@@ -1,0 +1,18 @@
+repository: serhii/tg-client
+commit: 6dcf60aa436fdbf1db73358995bc68d7807853ff
+date: 2026-08-13T00:49:41+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Add :send <path> — send a file to the active chat
+Wires the existing TgClient.sendFile() to the command-line mode:
+- :send <path> sends photo/video/document to the active chat
+- ~ expansion, basename in the status line, error status on failure
+- usage hint when no path given
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
