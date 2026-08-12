@@ -1,0 +1,39 @@
+repository: serhii/tg-client
+commit: 004830ef193fb39d201fea34bbf4d21918f40f36
+date: 2026-08-12T13:54:54+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Fix inline images, message order, Esc handling, Tab focus, media cache
+Images:
+- Root cause of 'photos never display': readImageSize only read 128 header
+  bytes, so EXIF-heavy JPEGs returned null and the download was never
+  cached (placeholder stuck on 'loading…'). Header read bumped to 1MB;
+  dimension reads made exception-safe.
+- Persistent disk cache: media now lives in ~/.local/share/tg-client/media/
+  (not /tmp) with chatId_msgId filenames (no cross-chat collisions).
+  Restarts reuse the cache (no re-download).
+- Prefetch only the 5 newest pictures; older ones download on demand when
+  they scroll into view (on-visible-media hook). Failed downloads are
+  remembered so the per-frame hook can't retry them forever.
+
+Message order:
+- iterMessages yields newest→oldest; the list is now reversed so the chat
+  renders oldest→newest with the newest pinned to the bottom.
+
+Keys/focus:
+- Bare ESC never resolved in the key parser (buffered until the next key,
+  merging Esc+Tab into Alt+Tab). A lone ESC now times out after 80ms and
+  resolves as Escape — Esc, then Tab, then j/k work as expected.
+- Sidebar navigation verified (Tab cycle sidebar↔pane, j/k select, Enter
+  opens); the earlier dead-feeling Tab was the connect hang leaving an
+  empty dialog list — connect now runs in the background with retries.
+
+Also: message view background uses the sidebar theme color (was fg).
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
