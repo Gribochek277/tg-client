@@ -1,0 +1,14 @@
+repository: serhii/tg-client
+commit: a46d9edab80fca8f6e24f71d1aac7772eff04ef8
+date: 2026-08-12T18:55:06+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Fix Kitty duplicate placements and async image rendering
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
