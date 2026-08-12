@@ -1,0 +1,31 @@
+repository: serhii/tg-client
+commit: 3aa940e62cc0730f0d49e344fcadf678e8390e5e
+date: 2026-08-12T14:16:39+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Fix Kitty image display: transmit PNG, not JPEG; transparent bg; PRD folders
+Images never rendered because the Kitty graphics protocol only accepts
+f=24/32/100 (RGB/RGBA/PNG) — my JPEG (f=101) and WebP (f=103) transmits
+were silently rejected by the terminal, leaving blank holes. Now:
+- sharp converts every downloaded thumb/preview to PNG at download time
+  (cache stores chatId_msgId_x.png; old JPGs convert lazily on cache hit).
+- buildTransmit no longer sends a bogus s= (that key is image width, not
+  payload size — PNG reads its dimensions from the data).
+- Verified end-to-end with a q=0 verbose transmit: terminal answers OK
+  for f=100 chunked PNGs (306 chunks through herdr → Ghostty).
+
+UI: backgrounds are transparent now (terminal's own bg/transparency shows
+through); the active bg is only on the selected sidebar row and the
+message cursor row.
+
+PRD: chat folders moved into M1 (sidebar shows Telegram folders via
+messages.getDialogFilters + All chats), split panes removed from M1
+rendering.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
