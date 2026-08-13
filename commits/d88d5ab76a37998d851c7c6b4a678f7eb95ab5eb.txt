@@ -1,0 +1,14 @@
+repository: serhii/tg-client
+commit: d88d5ab76a37998d851c7c6b4a678f7eb95ab5eb
+date: 2026-08-13T03:03:59+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Inline animated GIF playback via Kitty graphics (sharp frame decode + app-side animation loop)
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
