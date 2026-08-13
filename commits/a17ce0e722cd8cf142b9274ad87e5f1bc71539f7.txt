@@ -1,0 +1,14 @@
+repository: serhii/tg-client
+commit: a17ce0e722cd8cf142b9274ad87e5f1bc71539f7
+date: 2026-08-13T03:51:47+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Play DM alert sound (assets/dm-notify.mp3) on incoming private messages
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
