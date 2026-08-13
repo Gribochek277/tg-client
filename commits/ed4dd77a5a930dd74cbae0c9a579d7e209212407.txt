@@ -1,0 +1,21 @@
+repository: serhii/tg-client
+commit: ed4dd77a5a930dd74cbae0c9a579d7e209212407
+date: 2026-08-13T14:52:33+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Fix sticker classification and inline rendering (#11)
+MessageMediaSticker does not exist in the TL schema — stickers arrive as
+MessageMediaDocument with a DocumentAttributeSticker. Classify them as
+kind 'sticker' (labels, inline pipeline), expose width/height from
+DocumentAttributeImageSize so the layout reserves the box up front, and
+gate inline rendering on an image/* mimeType: static/animated webp
+stickers render (sharp decodes the first frame), animated TGS stickers
+fall back to the sticker label instead of a forever-loading box.
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
