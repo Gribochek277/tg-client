@@ -1,0 +1,14 @@
+repository: serhii/tg-client
+commit: 7a17bb79f4d27ce118084038036216545a00a4d4
+date: 2026-08-13T15:17:41+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Drafts: auto-save composer text and restore on reload (#10)
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
