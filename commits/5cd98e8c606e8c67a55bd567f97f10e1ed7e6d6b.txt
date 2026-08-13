@@ -1,0 +1,14 @@
+repository: serhii/tg-client
+commit: 5cd98e8c606e8c67a55bd567f97f10e1ed7e6d6b
+date: 2026-08-13T05:30:02+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Add settings form: notify volume, theme, UI toggles (persisted to config.json)
+
+---
+Source code is NOT published on GitHub.
+My code is hosted on a private server - this repository only reflects my working activity.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
